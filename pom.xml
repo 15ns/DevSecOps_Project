@@ -37,5 +37,30 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Optional URL to server. Default value is http://localhost:9000 -->
+				<sonar.host.url>http://myserver:9000</sonar.host.url>
+			</properties>
+		</profile>
+	</profiles>
+	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>sonarsource</id>
+			<url>https://plugins.sonarsource.com/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
